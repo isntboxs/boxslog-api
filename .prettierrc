@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/prettierrc",
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-packagejson"
+  ],
+  "importOrder": [
+    "^(assert|buffer|child_process|cluster|crypto|dgram|dns|domain|events|fs|http|https|module|net|path|querystring|readline|repl|stream|string_decoder|sys|timers|tls|url|util|vm|zlib|os|worker_threads|process|v8|tty)$",
+    "^node:",
+    "^@hono/node-server",
+    "^hono",
+    "^@?\\w.*",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": true
+}
