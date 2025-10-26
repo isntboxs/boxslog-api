@@ -18,6 +18,8 @@ export const env = createEnv({
         .map(origin => origin.trim())
         .filter(Boolean)
     ),
+    BETTER_AUTH_URL: z.string(),
+    BETTER_AUTH_SECRET: z.string(),
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,
