@@ -7,10 +7,19 @@
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:start": "docker compose up -d",
+    "db:watch": "docker compose up",
+    "db:stop": "docker compose stop",
+    "db:down": "docker compose down"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.5",
+    "@prisma/client": "^6.18.0",
     "@t3-oss/env-core": "^0.13.8",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
@@ -25,6 +34,7 @@
     "@eslint/js": "^9.38.0",
     "@types/node": "^20.11.17",
     "eslint": "^9.38.0",
+    "prisma": "^6.18.0",
     "tsdown": "^0.15.10",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3",

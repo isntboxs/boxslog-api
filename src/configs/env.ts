@@ -8,6 +8,7 @@ import * as z from 'zod';
 
 export const env = createEnv({
   server: {
+    DATABASE_URL: z.url(),
     NODE_ENV: z.enum(['development', 'test', 'production']),
     PORT: z.coerce.number(),
     LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']),
