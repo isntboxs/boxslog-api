@@ -11,7 +11,12 @@ export const env = createEnv({
     NODE_ENV: z.enum(['development', 'test', 'production']),
     PORT: z.coerce.number(),
     LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']),
-    CORS_ORIGINS: z.string().transform(value => value.split(',')),
+    CORS_ORIGINS: z.string().transform(value =>
+      value
+        .split(',')
+        .map(origin => origin.trim())
+        .filter(Boolean)
+    ),
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,
