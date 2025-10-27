@@ -8,10 +8,11 @@ import createApp from '@/lib/create-app';
  */
 import index from '@/routes/index';
 import auth from '@/routes/auth';
+import blogs from '@/routes/blogs';
 
 const app = createApp();
 
-const routes = [index, auth] as const;
+const routes = [index, auth, blogs] as const;
 
 routes.forEach(route => {
   app.basePath('/api').route('/', route);
